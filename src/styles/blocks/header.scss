@@ -1,0 +1,20 @@
+.header {
+  box-sizing: border-box;
+  background-image: url(/src/images/header-bacground-photo.png);
+  background-size: cover;
+  background-position-x: 85%;
+  height: 84vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title {
+  padding-inline: 20px;
+  margin-bottom: 88px;
+  font-weight: 700;
+  font-size: 36px;
+  letter-spacing: -1.5px;
+}
