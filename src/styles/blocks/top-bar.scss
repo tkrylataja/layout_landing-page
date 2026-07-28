@@ -1,22 +1,40 @@
 .top-bar {
-  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  padding-block: 24px;
 
-  // height: 86px;
-  padding: 24px 20px;
-}
+  @include on-tablet {
+    padding-block: 36px;
+  }
 
-.top-bar__logo {
-  height: 38px;
-  display: flex;
-}
+  &--menu-top {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: $background-grey;
+  }
 
-.top-bar__icons {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 24px;
+  &__logo {
+    height: 38px;
+    display: flex;
+
+    @include hover(transform, scale(1.2));
+
+    @include on-tablet {
+      height: 56px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+
+    @include on-tablet {
+      gap: 32px;
+    }
+  }
 }

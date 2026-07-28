@@ -3,16 +3,28 @@
   width: 24px;
   height: 24px;
   background-position: center;
-}
+  background-size: cover;
 
-.icon--phone {
-  background-image: url(/src/images/icon/icon-phone-call.png);
-}
+  @include hover(transform, scale(1.2));
 
-.icon--burger {
-  background-image: url(/src/images/icon/icon-burger-menu.png);
-}
+  @include on-tablet {
+    width: 32px;
+    height: 32px;
+  }
 
-.icon--close {
-  background-image: url(/src/images/icon/icon-close.png);
+  &--phone {
+    background-image: url(../images/icon/icon-phone-call.png);
+  }
+
+  &--burger {
+    background-image: url(../images/icon/icon-burger-menu.png);
+
+    &:hover {
+      background-image: url(../images/icon/icon-burger-menu-hover.png);
+    }
+  }
+
+  &--close {
+    background-image: url(../images/icon/icon-close.png);
+  }
 }
