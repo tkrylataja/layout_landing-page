@@ -4,6 +4,7 @@
   height: 24px;
   background-position: center;
   background-size: cover;
+  cursor: pointer;
 
   @include hover(transform, scale(1.2));
 
@@ -14,6 +15,19 @@
 
   &--phone {
     background-image: url(../images/icon/icon-phone-call.png);
+    position: relative;
+    &:hover::before {
+      content: '+12345555555';
+      color: $text-color-white;
+      width: fit-content;
+      position: absolute;
+      right: 40px;
+      line-height: 24px;
+
+      @include on-tablet {
+        line-height: 32px;
+      }
+    }
   }
 
   &--burger {
