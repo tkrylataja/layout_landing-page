@@ -9,6 +9,11 @@ a {
   margin: 0;
   display: inline-flex;
   color: $text-color-white;
+  cursor: pointer;
+}
+
+button {
+  cursor: pointer;
 }
 
 .page {
